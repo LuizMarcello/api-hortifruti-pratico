@@ -1,12 +1,12 @@
 /* eslint-disable prettier/prettier */
 import type { AdonisEndpoint } from '@tuyau/core/types'
-import type { Registry } from './schema.d.ts'
+// import type { Registry } from './schema.d.ts'
 import type { ApiDefinition } from './tree.d.ts'
 
-const placeholder: any = {}
+// const placeholder: any = {}
 
 const routes = {
-,
+
 } as const satisfies Record<string, AdonisEndpoint>
 
 export { routes }

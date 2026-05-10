@@ -16,7 +16,7 @@ export default class User extends compose(BaseModel, withAuthFinder(hash)) {
   declare id: number
 
   @column()
-  declare name: string
+  declare nome: string
 
   @column()
   declare email: string
@@ -40,7 +40,7 @@ export default class User extends compose(BaseModel, withAuthFinder(hash)) {
   declare currentAccessToken?: AccessToken
 
   get initials() {
-    const [first, last] = this.name ? this.name.split(' ') : this.email.split('@')
+    const [first, last] = this.nome ? this.nome.split(' ') : this.email.split('@')
     if (first && last) {
       return `${first.charAt(0)}${last.charAt(0)}`.toUpperCase()
     }
